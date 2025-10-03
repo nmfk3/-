@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كيف أصبح فاشلًا - م. علي رحيم</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    font-family:'Cairo',sans-serif;
+    background:linear-gradient(135deg,#f7f8fc,#e4ebf5);
+    color:#333;line-height:1.8;overflow-x:hidden;scroll-behavior:smooth;
+}
+
+/* شاشة الترحيب */
+#splash{
+    position:fixed;top:0;left:0;width:100%;height:100%;
+    background:linear-gradient(135deg,#ff6b6b,#f06595);
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    color:white;z-index:1000;
+    opacity:0;transform:scale(0.8);
+    animation:splashZoom 1s forwards;
+}
+#splash h1{
+    font-size:3em;font-weight:bold;
+    animation:fadeInTitle 2s ease forwards;
+}
+#splash .author{
+    font-size:1.5em;margin-top:20px;
+    color:#ffe6e6;font-weight:bold;
+    text-shadow:0 0 10px #fff,0 0 20px #ff6b6b,0 0 40px #ff3366;
+    opacity:0;animation:glowAuthor 3s ease-in-out 1s forwards;
+}
+
+@keyframes splashZoom{
+    0%{opacity:0;transform:scale(0.8);}
+    50%{opacity:1;transform:scale(1.1);}
+    100%{opacity:1;transform:scale(1);}
+}
+@keyframes fadeInTitle{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
+}
+@keyframes glowAuthor{
+    0%{opacity:0;}
+    50%{opacity:1;text-shadow:0 0 10px #ff6b6b,0 0 30px #ff3366;}
+    100%{opacity:1;text-shadow:0 0 15px #fff,0 0 35px #ff6b6b;}
+}
+
+/* Header */
+header{
+    text-align:center;padding:60px 20px;
+    background:linear-gradient(90deg,#ff6b6b,#f06595);
+    color:white;box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+header h1{font-size:3em;margin:0;text-shadow:2px 2px 6px rgba(0,0,0,0.3);}
+header p{font-size:1.2em;margin-top:10px;font-style:italic;color:#ffe6e6;}
+
+/* Main */
+main{max-width:1000px;margin:40px auto;padding:0 20px;}
+
+/* Chapters */
+section{
+    background:white;margin-bottom:35px;
+    padding:40px 30px;border-radius:20px;
+    box-shadow:0 12px 25px rgba(0,0,0,0.1);
+    transition:transform 0.4s,box-shadow 0.4s;position:relative;
+}
+section:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,0.2);}
+section h2{font-size:2.2em;color:#ff6b6b;margin-bottom:20px;position:relative;}
+section h2::after{
+    content:'';display:block;width:70px;height:4px;background:#f06595;
+    margin-top:8px;border-radius:3px;
+}
+p,li{font-size:1.15em;}
+blockquote{
+    background:#ffe6e6;padding:18px 22px;border-left:6px solid #ff6b6b;
+    margin:25px 0;font-style:italic;color:#b22222;border-radius:6px;
+}
+ul{padding-left:22px;} li{margin-bottom:14px;}
+
+/* Watermark */
+.watermark{
+    font-size:1em;
+    text-align:right;
+    margin-top:20px;
+    opacity:0.25;
+    font-style:italic;
+    color:#888;
+}
+
+/* Dark Mode */
+.dark-mode-btn{
+    position:fixed;bottom:30px;right:30px;
+    padding:12px 18px;background:#ff6b6b;color:white;border:none;
+    border-radius:50px;cursor:pointer;font-size:1em;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);z-index:50;
+}
+.dark-mode-btn:hover{background:#f06595;}
+
+body.dark{background:#1c1c1c;color:#f0f0f0;}
+body.dark section{background:#2c2c2c;box-shadow:0 12px 25px rgba(0,0,0,0.4);}
+body.dark blockquote{background:#4d1a1a;color:#ffbcbc;border-left-color:#ff6b6b;}
+body.dark .watermark{color:#bbb;opacity:0.3;}
+
+/* Responsive */
+@media(max-width:768px){
+    section{padding:30px 20px;}
+    header h1{font-size:2.2em;}
+    #splash h1{font-size:2.5em;}
+    #splash .author{font-size:1.2em;}
+}
+@media(max-width:480px){
+    section{padding:25px 15px;}
+    header h1{font-size:1.8em;}
+    #splash h1{font-size:2em;}
+    #splash .author{font-size:1em;}
+}
+</style>
+</head>
+<body>
+
+<!-- شاشة الترحيب -->
+<div id="splash">
+    <h1>أهلاً بكم في عالم الفشل</h1>
+    <div class="author">إعداد: م. علي رحيم</div>
+</div>
+
+<header>
+    <h1>كيف أصبح فاشلًا</h1>
+    <p>دليل الفشل والسخرية – المؤلف: م. علي رحيم</p>
+</header>
+
+<main>
+    <section>
+        <h2>الفصل الأول: آمن بأنك لا تستطيع</h2>
+        <p>أول خطوة نحو الفشل أن تبدأ بإقناع نفسك أنك عاجز...</p>
+        <blockquote>"لا تحاول… ستفشل على أي حال!"</blockquote>
+        <ul>
+            <li>ردّد لنفسك أنك غير مستعد.</li>
+            <li>قل: "الوقت لم يحن بعد".</li>
+            <li>انتظر المثالية بدل أن تبدأ بما لديك.</li>
+        </ul>
+        <div class="watermark">✍️ م. علي رحيم</div>
+    </section>
+
+    <section>
+        <h2>الفصل الثاني: أجّل كل شيء إلى الغد</h2>
+        <p>الفاشل الحقيقي لا ينجز اليوم ما يمكن تأجيله لغدٍ...</p>
+        <div class="watermark">✍️ م. علي رحيم</div>
+    </section>
+
+    <section>
+        <h2>الفصل الثالث: اجعل الفوضى صديقك</h2>
+        <p>تخلَّ عن التنظيم. اترك مكتبك وأوراقك مبعثرة...</p>
+        <div class="watermark">✍️ م. علي رحيم</div>
+    </section>
+
+    <section>
+        <h2>الفصل الرابع: أرضِ الجميع وخسِر نفسك</h2>
+        <p>لا تفكر في أهدافك، فكر في رضا الآخرين...</p>
+        <div class="watermark">✍️ م. علي رحيم</div>
+    </section>
+
+    <section>
+        <h2>الفصل الخامس: اهرب من التعلم</h2>
+        <p>لا تجرّب شيئًا جديدًا ولا تتعلم من أخطائك...</p>
+        <div class="watermark">✍️ م. علي رحيم</div>
+    </section>
+
+    <section>
+        <h2>الفصل السادس: رافق من يسحبك إلى الأسفل</h2>
+        <p>اختَر أصدقاءً لا يشجعونك على التقدم...</p>
+        <div class="watermark">✍️ م. علي رحيم</div>
+    </section>
+</main>
+
+<button class="dark-mode-btn" onclick="document.body.classList.toggle('dark')">🌙 وضع الليل</button>
+
+<script>
+window.addEventListener('load',()=>{
+    setTimeout(()=>{
+        const splash=document.getElementById('splash');
+        splash.style.transition="opacity 1s ease, transform 1s ease";
+        splash.style.opacity='0';
+        splash.style.transform='scale(1.2)';
+        setTimeout(()=>{ splash.style.display='none'; },1000);
+    },3500);
+});
+</script>
+
+</body>
+</html>
